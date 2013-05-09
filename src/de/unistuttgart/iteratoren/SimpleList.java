@@ -3,9 +3,7 @@ package de.unistuttgart.iteratoren;
 import java.util.Iterator;
 
 /**
- * Minimal linked list.
- * - prepend()
- * - at()
+ * Minimal implementation of a linked list.
  */
 public class SimpleList<T> implements Iterable<T> {
 	SimpleNode<T> head;
@@ -22,6 +20,7 @@ public class SimpleList<T> implements Iterable<T> {
 			head = newNode;
 		}
 	}
+
 	T at(int pos) {
 		if (pos >= size) {
 			throw new IndexOutOfBoundsException();
@@ -37,8 +36,8 @@ public class SimpleList<T> implements Iterable<T> {
 	public Iterator<T> iterator() {
 		return new SimpleIterator<T>(head);
 	}
-	
+
 	public Iterable<T> reverseIterator() {
-		return (Iterable<T>)new ReverseIterator<T>(this);
+		return (Iterable<T>) new ReverseIterator<T>(this);
 	}
 }
