@@ -1,0 +1,9 @@
+package de.unistuttgart.ex0;
+public enum ProductFact {
+	NAME,
+	DESCRIPTION,
+	MANUFACTURER_NAME,
+	MANUFACTERE_STREET,
+	MANUFACTERE_CITY,
+	MANUFACTERE_COUNTRY
+}
