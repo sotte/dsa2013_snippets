@@ -1,13 +1,16 @@
 package de.unistuttgart.mapdemo;
 
+import java.util.Hashtable;
 import java.util.Map;
-import java.util.TreeMap;
 
 public class MapDemo {
 
 	public static void main(String[] args) {
 		// add some ppl
-		Map<Integer, Person> ppl = new TreeMap<Integer, Person>();
+		Map<Integer, Person> ppl = new Hashtable<Integer, Person>();
+		// Alternatively we could also use a tree map
+		// see http://docs.oracle.com/javase/6/docs/api/java/util/TreeMap.html
+		// Map<Integer, Person> ppl = new TreeMap<Integer, Person>();
 		for (int i = 0; i < 10; i++) {
 			Person p = new Person("person" + i);
 			ppl.put(p.matrikelNr, p);
